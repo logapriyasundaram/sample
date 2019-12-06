@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@color/background_color"
+    tools:context=".ui.login.LoginActivity"
+    android:stateListAnimator="@null"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35">
+    <ImageView
+        android:id="@+id/imgBunk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stateListAnimator="@null"
+        android:src="@drawable/webbanner"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.65"
+        android:stateListAnimator="@null"
+        >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/background_color"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/background_color">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvAuthenticate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Authenticate Yourself"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAuthenticate"
+                    android:background="@drawable/round_corner_edittext"
+                    android:hint="Username"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textSize="18sp"
+                    android:textColor="@color/typed_text_color"
+                    android:padding="8dp"
+                    android:textColorHint="@color/background_color" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etUserName"
+                    android:background="@drawable/round_corner_edittext"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/typed_text_color"
+                    android:textSize="18sp"
+                    android:padding="8dp"
+                    android:textColorHint="@color/background_color" />
+
+                <Button
+                    android:id="@+id/btnSigned"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etPassword"
+                    android:background="@drawable/round_corner_disable_button"
+                    android:text="Get Me In"
+                    android:textColor="@color/background_color"
+                    android:textSize="18sp"
+                    />
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</LinearLayout>

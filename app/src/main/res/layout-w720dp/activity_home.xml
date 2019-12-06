@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_lay" />
+
+    <RelativeLayout
+        android:id="@+id/rlVehicleNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/field_background_color"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.25">
+
+            <ImageView
+                android:id="@+id/imgVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/bike" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etVehicleNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:hint="@string/home_vehicle_no"
+                android:textColor="@color/typed_text_color"
+                android:textColorHint="@color/low_contrast"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCustomerDetails"
+        android:layout_width="320dp"
+        android:layout_height="220dp"
+        android:layout_below="@+id/rlVehicleNo"
+        android:background="@color/field_background_color"
+        android:padding="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/llUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.35">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/user_avatar" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_first_name"
+                    android:textColor="@color/typed_text_color"
+                    android:textColorHint="@color/low_contrast"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_last_name"
+                    android:textColor="@color/typed_text_color"
+                    android:textColorHint="@color/low_contrast"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_below="@+id/llUserName">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.35"
+                android:paddingLeft="22dp"
+                >
+
+                <ImageView
+                    android:id="@+id/imgPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/phone_call"
+                    android:visibility="visible"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone"
+                    android:layout_toEndOf="@+id/imgAdd"
+                    android:textColor="@color/background_color"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_mobile_num"
+                    android:textColor="@color/typed_text_color"
+                    android:textColorHint="@color/low_contrast"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_below="@+id/llMobileNumber">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.35"
+                android:paddingLeft="22dp">
+
+                <ImageView
+                    android:id="@+id/imgAddEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:src="@drawable/plus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:layout_toEndOf="@+id/imgAddEmail"
+                    android:textColor="@color/background_color"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_email"
+                    android:textColor="@color/typed_text_color"
+                    android:textColorHint="@color/low_contrast"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlVehicleDetails"
+        android:layout_width="320dp"
+        android:layout_height="220dp"
+        android:layout_below="@+id/rlVehicleNo"
+        android:background="@color/field_background_color"
+        android:padding="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="30dp"
+       >
+
+
+        <LinearLayout
+            android:id="@+id/llPickOil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.25">
+
+                <ImageView
+                    android:id="@+id/imgOilChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/oil" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/PickRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvPick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/typed_text_color"
+                        android:hint="@string/home_pick_oil"
+                        android:textColorHint="@color/low_contrast"/>
+
+                    <ImageView
+                        android:id="@+id/imgPickArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/down_arrow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/background_color" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llodoMeter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_below="@+id/llPickOil">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.25">
+
+                <ImageView
+                    android:id="@+id/imgodo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/odometer" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/etOdoMerter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_odometer"
+                    android:textColor="@color/typed_text_color"
+                    android:textColorHint="@color/low_contrast"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_below="@+id/llodoMeter">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.25">
+
+                <ImageView
+                    android:id="@+id/imgDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/calendar" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.85"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/etDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_date"
+                    android:textColor="@color/typed_text_color"
+                    android:textColorHint="@color/low_contrast"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imgSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/save"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="50dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Bunk</string>
+
+    <color name="background_color">#707274</color>
+    <color name="button_disable_color">#1f272b</color>
+    <color name="button_enabled_color">#fabb18</color>
+    <color name="field_background_color">#ffffff</color>
+    <color name="typed_text_color">#2288bc</color>
+    <color name="dialog_bg">#d8d8d8</color>
+    <color name="dialog_text_color">#ff0000</color>
+    <color name="toolbar_bg_color">#000000</color>
+    <color name="low_contrast">#cccccc</color>
+
+
+    <string name="error_text_login">Invalid Username/Password</string>
+    <string name="error_text_login_des">Contact your administrator for a valid credentials.</string>
+
+    <string name="error_head_oops">OOPS</string>
+    <string name="error_no_record_found">No record Found</string>
+    <string name="error_no_internet">NO INTERNET</string>
+
+    <string name="home_vehicle_no">Enter Vehicle Number*</string>
+    <string name="home_first_name">Enter a Name*</string>
+    <string name="home_last_name">Last Name</string>
+    <string name="home_mobile_num">Enter Mobile Number*</string>
+    <string name="home_email">Enter Email Id</string>
+    <string name="home_pick_oil">Pick Oil Changed</string>
+    <string name="home_odometer">Odometer Reading in kms</string>
+    <string name="home_date">Date of oil changes</string>
+
+    <string name="loading">Loading...</string>
+
+    <string name="vehicle_no_required">Vehicle Number is Required</string>
+    <string name="first_name_required">Name is Required</string>
+    <string name="last_name_required">Last Name is Required</string>
+    <string name="mobile_num_required">Mobile Number is Required</string>
+
+    <string name="referral_success_text">SUCCESSFULLY</string>
+    <string name="referral_thanks_text">SAVED CUSTOMER DETAIL</string>
+    <string name="contact_number">2537506</string>
+
+
+</resources>

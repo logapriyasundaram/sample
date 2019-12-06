@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llmainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="#000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlsuccess"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:id="@+id/llsuccess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvthanks"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/imgcorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/success_tick_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvsuccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/field_background_color"
+                android:textSize="30sp"
+                android:text="@string/referral_success_text" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvthanks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/field_background_color"
+            android:textSize="24sp"
+            android:text="@string/referral_thanks_text" />
+    </RelativeLayout>
+</LinearLayout>
